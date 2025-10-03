@@ -1,15 +1,12 @@
-Machine Learning Chatbot
+# Cybersecurity ML Chatbot  
 
-This project is a work-in-progress Cybersecurity ML Chatbot that uses natural language processing and a trained model to answer questions about cybersecurity topics such as SQL, Linux, Malware, Programming Languages, SIEM tools, and more.
+An interactive machine learning chatbot that answers common cybersecurity questions such as SQL, Linux, Malware, Programming Languages, SIEM tools, and more.  
+It uses scikit learn for query classification and responds with security knowledge.  
 
-Features
+> **Note:** This project is still in progress. It may make mistakes or misclassify some inputs. Updates will come soon.  
 
-Trained ML model (model.pkl) with example training data.
-
-Handles subtopics (e.g., malware types, Linux commands, SIEM tools).
-
-Interactive conversation flow with contextual follow-up questions.
-
-Chat logs are automatically saved in chat_log.txt.
-
-Designed for easy extension with new responses and training data.
+## Features  
+- Pretrained ML model (`model.pkl`) for classifying questions  
+- Context-aware conversations (e.g., malware types, Linux commands)  
+- Chat logs saved in `chat_log.txt`  
+- Expandable training data (`data.py`) and responses dictionary  

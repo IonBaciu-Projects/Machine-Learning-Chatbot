@@ -1,5 +1,4 @@
 responses = {
-    # SQL
     "sql": (
         "SQL (Structured Query Language) is used to manage and manipulate relational databases. "
         "In cybersecurity, poor SQL coding practices can lead to vulnerabilities such as SQL Injection. "
@@ -11,14 +10,12 @@ responses = {
         "It can bypass authentication and compromise sensitive data."
     ),
 
-    # Linux
     "linux": (
         "Linux is an open-source operating system widely used in cybersecurity, servers, "
         "penetration testing, and tools like Kali Linux. "
         "Would you like me to list common Linux security commands? (yes/no)"
     ),
 
-    # Programming
     "programming": (
         "Programming is the process of creating instructions for computers to perform tasks. "
         "It is essential in cybersecurity for automation, exploit development, and analysis. "
@@ -32,7 +29,6 @@ responses = {
     "html": "HTML (HyperText Markup Language) structures web pages. Security issues like XSS often exploit HTML/JavaScript.",
     "css": "CSS (Cascading Style Sheets) styles web pages. Attackers sometimes exploit CSS for obfuscation or clickjacking techniques.",
 
-    # Database
     "database": (
         "A database is an organized collection of data, typically managed by a database management system (DBMS). "
         "In cybersecurity, databases are prime targets for attacks such as SQL Injection. "
@@ -42,7 +38,6 @@ responses = {
     "encryption": "Encryption transforms data into unreadable form using algorithms and keys, protecting data at rest and in transit.",
     "vulnerability assessments": "Vulnerability assessments use scanners and reviews to identify security weaknesses before attackers exploit them.",
 
-    # Malware
     "malware": (
         "Malware is malicious software designed to harm or exploit systems. "
         "Examples include viruses, worms, trojans, ransomware, and spyware. "
@@ -55,7 +50,6 @@ responses = {
     "spyware": "Spyware secretly monitors user activity, often capturing keystrokes or credentials.",
     "backdoor": "A backdoor is malware that provides unauthorized remote access to a system.",
 
-    # SIEM
     "siem": (
         "SIEM (Security Information and Event Management) collects, normalizes, and correlates logs to detect and investigate threats. "
         "Would you like me to list popular SIEM tools? (yes/no)"
@@ -64,18 +58,15 @@ responses = {
     "elk": "ELK Stack (Elasticsearch, Logstash, Kibana) is an open-source SIEM solution popular for log collection and visualization.",
     "qradar": "IBM QRadar is a SIEM used for threat detection, compliance, and incident response.",
 
-    # Detection & Response
     "detection": "Detection in cybersecurity is identifying malicious activity or anomalies in systems, logs, or networks.",
     "response": "Incident Response involves analyzing, containing, eradicating, and recovering from cybersecurity incidents.",
 
-    # Risk & Vulnerabilities
     "risk management": "Risk management is the process of identifying, assessing, and mitigating risks to systems and data.",
     "vulnerabilities": "Vulnerabilities are flaws or weaknesses in software, hardware, or processes that attackers can exploit."
 }
 
 training_data = [
 
-    # SQL variations
     ("sql", "sql"), ("SQL", "sql"), ("Sql", "sql"),
     ("what is sql", "sql"), ("what’s sql", "sql"),
     ("tell me about sql", "sql"), ("explain sql", "sql"),
@@ -84,15 +75,12 @@ training_data = [
     ("sql commands", "sql"), ("sql tutorial", "sql"),
     ("sql usage", "sql"),
 
-    # SQL Injection
     ("sql injection", "sql injection"), ("SQL Injection", "sql injection"),
     ("what is sql injection", "sql injection"), ("what’s sql injection", "sql injection"),
     ("sqli", "sql injection"), ("database injection", "sql injection"),
     ("how does sql injection work", "sql injection"), ("explain sql injection", "sql injection"),
     ("examples of sql injection", "sql injection"), ("sql exploit", "sql injection"),
 
-
-    # Linux variations
     ("linux", "linux"), ("Linux", "linux"), ("LINUX", "linux"),
     ("what is linux", "linux"), ("what’s linux", "linux"),
     ("tell me about linux", "linux"), ("explain linux", "linux"),
@@ -101,15 +89,12 @@ training_data = [
     ("linux kernel", "linux"), ("linux basics", "linux"),
     ("what is kali", "linux"), ("learn linux", "linux"),
 
-
-    # Programming general
     ("programming", "programming"), ("Programming", "programming"),
     ("what is programming", "programming"), ("what’s programming", "programming"),
     ("tell me about programming", "programming"), ("explain programming", "programming"),
     ("coding", "programming"), ("computer programming", "programming"),
     ("software programming", "programming"), ("programming basics", "programming"),
 
-    # Programming languages
     ("python", "python"), ("Python", "python"),
     ("what is python", "python"), ("explain python", "python"),
     ("python language", "python"), ("python coding", "python"),
@@ -135,25 +120,21 @@ training_data = [
     ("what is css", "css"), ("explain css", "css"),
     ("css language", "css"), ("css styling", "css"),
 
-    # Database variations
     ("database", "database"), ("Database", "database"),
     ("databases", "database"), ("what is database", "database"),
     ("what are databases", "database"), ("tell me about databases", "database"),
     ("dbms", "database"), ("db system", "database"),
     ("sql database", "database"), ("data storage", "database"),
 
-    # Authentication
     ("authentication", "authentication"), ("Authentication", "authentication"),
     ("what is authentication", "authentication"), ("auth", "authentication"),
     ("user authentication", "authentication"), ("login authentication", "authentication"),
 
-    # Encryption
     ("encryption", "encryption"), ("Encryption", "encryption"),
     ("what is encryption", "encryption"), ("explain encryption", "encryption"),
     ("cryptography", "encryption"), ("data encryption", "encryption"),
     ("encryption methods", "encryption"), ("cipher", "encryption"),
 
-    # Vulnerability Assessments
     ("vulnerability assessments", "vulnerability assessments"),
     ("what is vulnerability assessment", "vulnerability assessments"),
     ("security assessment", "vulnerability assessments"),
@@ -161,13 +142,11 @@ training_data = [
     ("network assessment", "vulnerability assessments"),
     ("system vulnerability", "vulnerability assessments"),
 
-    # Malware general
     ("malware", "malware"), ("Malware", "malware"), ("what is malware", "malware"),
     ("what is malware", "malware"), ("what’s malware", "malware"),
     ("types of malware", "malware"), ("malicious software", "malware"),
     ("explain malware", "malware"), ("common malware", "malware"),
 
-    # Malware subtypes
     ("virus", "virus"), ("viruses", "virus"),
     ("what is a virus", "virus"), ("computer virus", "virus"),
 
@@ -186,7 +165,6 @@ training_data = [
     ("backdoor", "backdoor"), ("what is a backdoor", "backdoor"),
     ("what is a backdoor", "backdoor"),
 
-    # SIEM & tools
     ("siem", "siem"), ("SIEM", "siem"),
     ("what is siem", "siem"), ("tell me about siem", "siem"),
     ("explain siem", "siem"), ("siem system", "siem"),
@@ -200,7 +178,6 @@ training_data = [
     ("qradar", "qradar"), ("QRadar", "qradar"),
     ("what is qradar", "qradar"), ("ibm qradar", "qradar"),
 
-    # Detection & Response
     ("detection", "detection"), ("Detection", "detection"),
     ("what is detection", "detection"), ("incident detection", "detection"),
 
@@ -208,7 +185,6 @@ training_data = [
     ("incident response", "response"), ("what is response", "response"),
     ("security response", "response"),
 
-    # Risk & Vulnerabilities
     ("risk management", "risk management"), ("Risk Management", "risk management"),
     ("what is risk management", "risk management"), ("explain risk management", "risk management"),
 

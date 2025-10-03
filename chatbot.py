@@ -72,7 +72,6 @@ def chatbot_response(raw_input):
     if context["pending"]:
         pending = context["pending"]
 
-        # --- FIXED: Separate categories so they don’t overlap ---
         if pending == "sql":
             if user_input in ["yes", "y"]:
                 context["pending"] = None
@@ -121,7 +120,6 @@ def chatbot_response(raw_input):
                 context["pending"] = None
                 return "Okay. What else would you like to know?"
 
-        # Handle subtopic states (only run when in subtopic mode)
         elif pending in ["malware-types", "linux-commands", "programming-languages", "siem-tools", "database-sub"]:
             result, matched = handle_subtopic_answer(pending, user_input)
             if matched:
@@ -143,7 +141,6 @@ def chatbot_response(raw_input):
                         return "Choose one: authentication, encryption, vulnerability assessments."
                 return result
 
-    # --- Normal prediction path ---
     try:
         category, confidence = predict_category(user_input)
     except:
